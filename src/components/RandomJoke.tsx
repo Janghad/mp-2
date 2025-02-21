@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { types } from "../interfaces/types";
+import { types } from "../interfaces/jokes";
 
 const JokeDiv = styled.div`
   background-color: grey;  
