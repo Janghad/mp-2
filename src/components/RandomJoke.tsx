@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { jokes } from "../interfaces/jokes";
+import { Joke } from "../interfaces/jokes";
 
 const JokeDiv = styled.div`
   background-color: grey;  
@@ -13,11 +13,12 @@ const JokeDiv = styled.div`
 `;
 
 interface RandomJokeProps {
-  joke: jokes | null;
+  joke: Joke | null;
 }
 
 export default function RandomJoke(props: RandomJokeProps) {
   const { joke } = props;
+  
   if (!joke) {
     return <p>Click "Generate Joke" to display a joke.</p>;
   }
