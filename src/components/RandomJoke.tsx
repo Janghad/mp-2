@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import type Joke  from "../interfaces/jokes";  
 
 const JokeDiv = styled.div`
-  background-color: grey;  
+  background-color: grey;
   border-radius: 5px;
   margin: auto;
   text-align: center;        
@@ -12,11 +11,13 @@ const JokeDiv = styled.div`
   box-sizing: border-box;
 `;
 
-interface RandomJokeProps {
-  joke: Joke | null;
+interface JokeData {
+  type: string;
+  setup: string;
+  punchline: string;
 }
 
-export default function RandomJoke({ joke }: RandomJokeProps) {
+export default function RandomJoke({ joke }: { joke: JokeData | null }) {
   if (!joke) {
     return <p>Click "Generate Joke" to display a joke.</p>;
   }
