@@ -12,9 +12,12 @@ const JokeDiv = styled.div`
   box-sizing: border-box;
 `;
 
+interface RandomJokeProps {
+  joke: types | null;
+}
 
-
-export default function RandomJoke({ joke }: types) {
+export default function RandomJoke(props: RandomJokeProps) {
+  const { joke } = props;
   if (!joke) {
     return <p>Click "Generate Joke" to display a joke.</p>;
   }
