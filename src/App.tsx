@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import RandomJoke from "./components/RandomJoke";
-import { types } from "./interfaces/jokes";
+import { jokes } from "./interfaces/jokes";
 import './App.css'
 
 const ParentDiv = styled.div`
@@ -12,11 +12,11 @@ const ParentDiv = styled.div`
 `;
 
 export default function App() {
-  const [joke, setJoke] = useState<types | null>(null);
+  const [joke, setJoke] = useState<jokes | null>(null);
 
   async function fetchData(): Promise<void> {
       const rawData = await fetch("https://official-joke-api.appspot.com/jokes/random");
-      const results: types = await rawData.json();
+      const results: jokes = await rawData.json();
       setJoke(results);
   }
 

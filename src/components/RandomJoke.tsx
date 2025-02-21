@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { types } from "../interfaces/jokes";
+import { jokes } from "../interfaces/jokes";
 
 const JokeDiv = styled.div`
   background-color: grey;  
@@ -13,7 +13,7 @@ const JokeDiv = styled.div`
 `;
 
 interface RandomJokeProps {
-  joke: types | null;
+  joke: jokes | null;
 }
 
 export default function RandomJoke(props: RandomJokeProps) {
