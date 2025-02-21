@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import RandomJoke from "./components/RandomJoke";
-import { types } from "./interfaces/types";
+import { types } from "./interfaces/jokes";
 import './App.css'
 
 const ParentDiv = styled.div`
