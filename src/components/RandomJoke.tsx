@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import type { Joke } from "../interfaces/jokes";  // Add 'type' keyword
+import type Joke  from "../interfaces/jokes";  
 
 const JokeDiv = styled.div`
   background-color: grey;  
@@ -12,7 +12,6 @@ const JokeDiv = styled.div`
   box-sizing: border-box;
 `;
 
-// Explicitly define props interface
 interface RandomJokeProps {
   joke: Joke | null;
 }
